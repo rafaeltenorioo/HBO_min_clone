@@ -1,0 +1,46 @@
+.inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.inputField {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #fff;
+    padding: 0.4rem;
+    font-size: 1rem;
+    width: 3.5rem;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Remove as setas padrão (Chrome, Safari, Edge, Opera) */
+.inputField::-webkit-outer-spin-button,
+.inputField::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove as setas (Firefox) */
+.inputField[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.inputField:focus {
+    border-color: #7e57c2; /* Roxo HBO */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px rgba(126, 87, 194, 0.4);
+}
+
+.label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #bbb;
+}

@@ -1,0 +1,55 @@
+.savedItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  /* Uma linha sutil separando cada filme */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease;
+}
+.savedItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.savedItem img {
+  width: 4.5rem;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0; /* Impede que a imagem seja esmagada se o título for longo */
+
+  cursor: pointer;
+}
+.savedItem span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+
+  /* Corta o texto com "..." se o título for gigante (ex: O Senhor dos Anéis...) */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.savedItem_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+.btDelete {
+  align-self: flex-start;
+  background-color: transparent;
+  border: none;
+  color: #bbb;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 0;
+}
+.btDelete:hover {
+  color: #ff4d4d;
+}

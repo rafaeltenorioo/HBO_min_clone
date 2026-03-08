@@ -1,0 +1,21 @@
+.iconFav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    color: white;
+
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
+}
+.iconFav:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,4 @@
+.container_title_link {
+  display: flex;
+  justify-content: space-between;
+}

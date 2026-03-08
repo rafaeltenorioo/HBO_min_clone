@@ -1,0 +1,32 @@
+.movieGrid {
+  display: grid;
+  /* Cria quantas colunas couberem, com no mínimo 160px cada */
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-bottom: 5rem;
+}
+.nav_movies_category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.pageTitle {
+  color: #f0f0f0;
+  font-size: clamp(1rem, 1rem + 1vw, 1.7rem);
+}
+
+@media (min-width: 768px) {
+  .movieGrid {
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  }
+}

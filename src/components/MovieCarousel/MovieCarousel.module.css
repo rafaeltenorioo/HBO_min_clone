@@ -1,0 +1,55 @@
+.container {
+  position: relative; /* Para posicionar os botões em cima das imagens */
+}
+.title {
+  color: var(--cor-texto);
+}
+.container_NavigationButtonLeft,
+.container_NavigationButtonRight {
+  display: none;
+}
+.container_NavigationButtonLeft {
+  left: 0;
+}
+.container_NavigationButtonRight {
+  right: 0;
+}
+
+.carousel {
+  display: flex;
+  gap: 0.7rem;
+  overflow-x: auto; /* Permite rolar horizontalmente */
+  scroll-behavior: smooth;
+
+  margin-bottom: 2rem;
+  padding: 1rem 0 1rem 0;
+}
+
+/* Esconde barra no Chrome/Safari */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.container_carousel {
+  min-width: 10rem;
+}
+
+@media (min-width: 640px) {
+  .container_carousel {
+    min-width: 11rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container_carousel {
+    min-width: 12rem;
+  }
+  .container_NavigationButtonLeft,
+  .container_NavigationButtonRight {
+    display: flex;
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    z-index: 50; /* Garante que fique por cima da imagem */
+  }
+}

@@ -1,0 +1,172 @@
+.container_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal_content {
+  width: 100%;
+  max-width: 28rem;
+  max-height: 90vh;
+
+  background: linear-gradient(135deg, #0b0116 0%, #1a1a1a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column; /* Vertical no Mobile */
+  overflow: hidden;
+  position: relative;
+
+  animation: modalScale 0.3s ease-out;
+}
+@keyframes modalScale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.imgContainer {
+  width: 100%;
+  aspect-ratio: 2/3;
+  position: relative;
+  flex-shrink: 0; /* Impede o esmagamento da imagem */
+}
+.imgContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, #0b0116, transparent);
+}
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.rating {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #ffbd00;
+  color: #ffbd00;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  font-size: 0.75rem;
+  z-index: 5;
+}
+
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+.content_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 1rem;
+}
+.title {
+  align-self: center;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin: 0;
+}
+.date {
+  color: #fff;
+}
+.description {
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.btClose {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background: transparent;
+  color: white;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+.btClose:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+.favPostCard {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+
+  z-index: 10;
+
+  /* backdrop-filter borra o que está atrás do botão */
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 48rem) {
+  .modal_content {
+    max-width: 60rem;
+    flex-direction: row;
+    height: 35rem;
+  }
+  .imgContainer {
+    width: 23rem;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+  .imgContainer::after {
+    /* No desktop, o gradiente muda para a lateral */
+    height: 100%;
+    width: 30%;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    background: linear-gradient(to left, #0b0116, transparent);
+  }
+  .content {
+    padding: 2rem;
+    gap: 5rem;
+  }
+  .content_text {
+    gap: 1.5rem;
+  }
+  .description {
+    -webkit-line-clamp: 8;
+    line-clamp: 8;
+  }
+}

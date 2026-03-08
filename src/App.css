@@ -1,0 +1,20 @@
+body {
+  background: linear-gradient(
+    to bottom,
+    #10012b 0%,
+    var(--cor-fundo) 100%
+  ); /* Gradiente para o fundo n parecer 'chapado'*/
+  background-attachment: fixed; /* O fundo n rola junto com o conteúdo */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1.5rem;
+  position: relative;
+}
