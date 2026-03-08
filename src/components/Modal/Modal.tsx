@@ -14,7 +14,11 @@ export const Modal = () => {
 
   const { selectedMovie, closeModal } = useModal();
 
-  const isSaved = context?.savedMovies.some((m) => m.id === selectedMovie?.id);
+  const isSaved = context?.savedMovies.some(
+    (m) => Number(m.id) === Number(selectedMovie?.id),
+  );
+
+  console.log("ID Selecionado:", selectedMovie?.id, "Está salvo?", isSaved);
 
   // Fechar a modal com Esc
   useEffect(() => {
