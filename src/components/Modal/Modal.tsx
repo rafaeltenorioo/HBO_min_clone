@@ -16,8 +16,6 @@ export const Modal = () => {
 
   const isSaved = context?.savedMovies.some((m) => m.id === selectedMovie?.id);
 
-  console.log("ID Selecionado:", selectedMovie?.id, "Está salvo?", isSaved);
-
   // Fechar a modal com Esc
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
