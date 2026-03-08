@@ -1,0 +1,4 @@
+dist/* linguist-vendored
+node_modules/* linguist-vendored
+stats.html linguist-vendored
+*.json linguist-documentation
