@@ -88,7 +88,7 @@ export const Home = () => {
           <div className={styles.container_title_link}>
             <PageTitle title="Filmes em Breve" />
 
-            <SeeMore path="/fimes/emBreve" />
+            <SeeMore path="/filmes/emBreve" />
           </div>
           <MovieCarousel
             data={moviesUpcoming.results}

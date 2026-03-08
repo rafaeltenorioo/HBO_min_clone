@@ -64,8 +64,8 @@ function App() {
               />
             </Routes>
           </main>
+          <Modal />
         </SaveMoviesContext.Provider>
-        <Modal />
       </ModalProvider>
     </BrowserRouter>
   );
