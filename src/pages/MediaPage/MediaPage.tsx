@@ -56,8 +56,9 @@ export const MediaPage = ({ type, category }: MediaPageProps) => {
           ? new Array(20)
               .fill(0)
               .map((_, index) => <Skeleton key={`skeleton-${index}`} />)
-          : data?.results.map((item) => (
+          : data?.results.map((item, index) => (
               <MovieCard
+                index={index}
                 movie={item}
                 key={item.id}
                 onSelect={() => openModal(item)}
