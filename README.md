@@ -4,6 +4,13 @@ Um projeto Front-end desenvolvido para aprimorar habilidades em **React** e **Ty
 
 A aplicação consome o catálogo de filmes da API do TMDB (The Movie Database) e permite aos usuários visualizar detalhes das obras e salvar seus filmes favoritos para assistir posteriormente, utilizando armazenamento local.
 
+## Prévia do Projeto
+
+<div align="center">
+  <img src="./src/assets/video_apresentacao_HBO_min.mp4" alt="Página Inicial do HBO min" width="400px" />
+
+</div>
+
 ## 🚀 Tecnologias e Ferramentas
 
 - **React 19** - Biblioteca para criação de interfaces de usuário.
