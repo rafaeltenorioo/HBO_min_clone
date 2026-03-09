@@ -11,7 +11,13 @@ A aplicação consome o catálogo de filmes da API do TMDB (The Movie Database) 
     />
   <img src="./src/assets/print_modal_hbo_ts.png" alt="Modal da aplicação " width="400px"
     />
-
+</div>
+<div align="center">
+  <p>
+    <a href="hbo-min-clone.vercel.app" target="_blank">
+      🔗 Clique aqui para acessar a aplicação online
+    </a>
+  </p>
 </div>
 
 ## 🚀 Tecnologias e Ferramentas
