@@ -7,11 +7,10 @@ A aplicação consome o catálogo de filmes da API do TMDB (The Movie Database) 
 ## Prévia do Projeto
 
 <div align="center">
-  <video src="./src/assets/video_apresentacao_HBO_min.mp4" alt="Página Inicial do HBO min" width="500px"
-  controls
-  muted
-  autoplay
-  loop />
+  <img src="./src/assets/print_home_hbo_ts.png" alt="Página Home da aplicação" width="400px"
+    />
+  <img src="./src/assets/print_modal_hbo_ts.png" alt="Modal da aplicação " width="400px"
+    />
 
 </div>
 
